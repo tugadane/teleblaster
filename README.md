@@ -20,7 +20,25 @@ Versi saat ini: `v0.1` (fitur inti sudah ada, beberapa alur advanced masih berta
 - Cooldown persistence untuk FloodWait
 - Atomic writes untuk JSON/CSV
 
-## Setup
+## Quick Start (Windows, One-Click)
+
+Untuk user yang tidak mau buka terminal, cukup **double-click `Run-GUI.bat`**.
+Saat pertama dijalankan launcher akan otomatis:
+
+1. Membuat virtual environment di `.venv/` (kalau belum ada).
+2. Install dependencies dari `requirements.txt`.
+3. Meminta `API_ID` + `API_HASH` (didapat dari https://my.telegram.org/apps)
+   lalu menulis ke `.env`.
+4. Menjalankan `gui_app.py`.
+
+Dari run kedua dan seterusnya launcher akan menggunakan venv & .env yang sudah
+ada dan langsung menampilkan GUI. Kalau ingin re-install dependencies, hapus
+file `.venv/.tele_deps_ok`.
+
+`Run-GUI.vbs` adalah varian silent (tanpa jendela CMD). Cocok dipakai jadi
+shortcut di Desktop setelah setup awal selesai.
+
+## Manual Setup (Linux / Mac / advanced users)
 
 1. Install dependencies
 
@@ -38,16 +56,11 @@ API_HASH=your_api_hash
 3. Jalankan
 
 ```bash
-python main.py
+python main.py        # CLI
+python gui_app.py     # Desktop GUI
 ```
 
-## Run Desktop GUI
-
-Untuk mode desktop yang lebih user-friendly:
-
-```bash
-python gui_app.py
-```
+## Desktop GUI
 
 GUI menyediakan tab untuk Login, Scraper, Adder, Broadcast, dan Sessions.
 
@@ -63,15 +76,6 @@ Tab `Broadcast` juga mendukung compose langsung tanpa edit file:
 - Lampiran file campuran (gambar, video, dokumen/teks)
 - Kombinasi text + link + attachment dalam satu kali broadcast
 - Setting delay acak min/max antar pengiriman (contoh 5 sampai 20 detik)
-
-## One-Click Run (No Terminal)
-
-Untuk user non-teknis, cukup double-click file berikut di folder project:
-
-- `Run-GUI.vbs` (recommended, tanpa jendela terminal)
-- `Run-GUI.bat` (fallback launcher)
-
-Launcher akan mencoba `pythonw.exe` dari virtual environment otomatis.
 
 ## Quick QR Test
 

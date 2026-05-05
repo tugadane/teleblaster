@@ -1,0 +1,5 @@
+# Folder ini diisi otomatis oleh build_distribusi.bat (Windows)
+# atau build_distribusi.sh (Linux smoke test).
+#
+# Jangan hapus README-CLIENT.txt — file itu disertakan ke setiap
+# folder build agar client tahu cara pakai.

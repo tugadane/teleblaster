@@ -8,3 +8,13 @@ members.csv
 scrape_checkpoint.json
 account_cooldowns.json
 qr_login.png
+
+# PyInstaller build artefak
+build/
+dist/
+.venv/
+
+# Distribusi: hanya commit README + .gitkeep, output build di-ignore
+Distribusi/TelegramBlaster/
+Distribusi/TelegramBlaster.zip
+Distribusi/TelegramBlaster.tar.gz
